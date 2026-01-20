@@ -4,32 +4,10 @@
    =========================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initThemeToggle();
     initProductTabs();
     initMobileMenu();
     initSmoothScroll();
 });
-
-/* ===========================================
-   Theme Toggle
-   =========================================== */
-function initThemeToggle() {
-    const toggle = document.getElementById('themeToggle');
-    if (!toggle) return;
-
-    const savedTheme = localStorage.getItem('greyai-theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme === 'light' || (!savedTheme && !prefersDark)) {
-        document.body.classList.add('light-mode');
-    }
-
-    toggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        const isLight = document.body.classList.contains('light-mode');
-        localStorage.setItem('greyai-theme', isLight ? 'light' : 'dark');
-    });
-}
 
 /* ===========================================
    Product Tabs
