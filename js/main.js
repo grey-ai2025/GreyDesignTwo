@@ -93,16 +93,3 @@ function initSmoothScroll() {
     });
 }
 
-/* ===========================================
-   Logo Carousel Pause on Hover
-   =========================================== */
-const logosTrack = document.querySelector('.logos-track');
-if (logosTrack) {
-    const wrapper = logosTrack.parentElement;
-    wrapper.addEventListener('mouseenter', () => {
-        logosTrack.style.animationPlayState = 'paused';
-    });
-    wrapper.addEventListener('mouseleave', () => {
-        logosTrack.style.animationPlayState = 'running';
-    });
-}
